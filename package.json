@@ -1,8 +1,8 @@
 {
-    "name": "materialpro",
+    "name": "Wessam",
     "version": "1.0.0",
-    "homepage": "http://161.35.115.193:5026/admins-dashboard",
-    "description": "material-pro react admin comes with the beautiful Ui with easy to use code",
+    "homepage": "http://161.35.115.193:5026/admins-dashboard/",
+    "description": "MR Wessam's website dashboard",
     "main": "index.js",
     "scripts": {
         "start": "react-scripts start",
