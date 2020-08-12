@@ -1,0 +1,10 @@
+.act{
+    background: #22abbd;
+    color: #fff;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.act i , .act span{
+    color: #fff !important;
+}

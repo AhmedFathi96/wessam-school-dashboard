@@ -1,0 +1,11 @@
+.card{
+    width: 30%;
+    margin: 1rem;
+}
+.controlWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    width: 30%;
+    float: right;
+}

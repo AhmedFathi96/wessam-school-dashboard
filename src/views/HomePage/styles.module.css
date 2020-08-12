@@ -1,0 +1,9 @@
+.sliderWrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+}
