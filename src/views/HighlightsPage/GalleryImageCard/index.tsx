@@ -8,8 +8,7 @@ import {
 } from 'reactstrap';
 import * as styles from './styles.module.css';
 import { useDispatch } from "react-redux";
-import { editSliderItem, deleteSliderItem } from "../../../React-Redux/Actions/slider-action";
-import { editGalleryImage, deleteGalleryImage, getGalleryImage } from "../../../React-Redux/Actions/gallery-action";
+import { editGalleryImage, deleteGalleryImage } from "../../../React-Redux/Actions/gallery-action";
 
 interface IProps{
     img_src:string;

@@ -99,7 +99,7 @@ const HomeTestimonial:React.FC = () => {
                         Testimonial.map(item=>
                             <SingleTestimonialCard 
                                 id={item._id}
-                                img_src={`http://localhost:5026/api/testimonial/get-testimonial-image/${item._id}/view`} 
+                                img_src={`http://161.35.115.193:5026/api/testimonial/get-testimonial-image/${item._id}/view`} 
                                 testimonial_content={item.content} 
                                 testimonial_author={item.author} 
                                 testimonial_author_job={item.about_author} 

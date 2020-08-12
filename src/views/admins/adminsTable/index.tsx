@@ -85,7 +85,7 @@ const AdminsTable: React.FC<IProps> = (props) => {
         };
     });
 
-    return <div>
+    return (<div>
         <Modal isOpen={modal} toggle={toggle.bind(null)}>
             <ModalHeader toggle={toggle.bind(null)}>{obj.name === undefined?'Create new admin':'Edit existed admin'}</ModalHeader>
             <ModalBody>
@@ -179,7 +179,7 @@ const AdminsTable: React.FC<IProps> = (props) => {
         </Card>
         
         
-    </div>
+    </div>);
 }
 
 export default AdminsTable;

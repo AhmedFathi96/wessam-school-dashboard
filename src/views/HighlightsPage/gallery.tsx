@@ -89,7 +89,7 @@ const Gallery:React.FC = () => {
                 <div className={styles.default.sliderWrapper}>
                     {
                         GalleryImages.map( item=> 
-                            <SingleGalleryImageCard id={item._id} img_src={`http://localhost:5026/api/gallery/get-gallery-image/${item._id}/view`} height_ration={item.height_ration} order={item.order} />
+                            <SingleGalleryImageCard id={item._id} img_src={`http://161.35.115.193:5026/api/gallery/get-gallery-image/${item._id}/view`} height_ration={item.height_ration} order={item.order} />
                         )
                     }
                 </div>
