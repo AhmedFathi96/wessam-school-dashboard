@@ -1,7 +1,7 @@
 {
     "name": "Wessam",
     "version": "1.0.0",
-    "homepage": "http://161.35.115.193/admins-dashboard/",
+    "homepage": "http://www.wessammohamed.com/admin-dashboard/",
     "description": "MR Wessam's website dashboard",
     "main": "index.js",
     "scripts": {
