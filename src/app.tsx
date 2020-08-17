@@ -1,7 +1,5 @@
 import React from 'react';
-import indexRoutes from './routes';
 import { HashRouter } from "react-router-dom";
-import { PrivateRoute } from './routes/PrivateRoutes';
 import { useSelect } from './helper';
 import Fulllayout from './layouts/fulllayout'
 import Login from './views/authentication/login';

@@ -1,0 +1,11 @@
+.headerWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.ReactTable .rt-table .rt-tbody .rt-tr-group .rt-tr  .rt-td{
+    text-align: center !important;
+}
+.controlWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}

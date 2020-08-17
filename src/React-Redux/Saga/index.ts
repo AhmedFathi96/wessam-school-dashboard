@@ -31,6 +31,10 @@ import { watchEditBlogPostSaga } from "./edit-blog-post-saga";
 import { watchCreateContactSagaSaga } from "./create-contact-saga";
 import { watchDeleteContactSagaSaga } from "./delete-contact-saga";
 import { watchGetContactsSagaSaga } from "./get-contacts-saga";
+import { watchCreateCourseSagaSaga } from "./create-course-saga";
+import { watchDeleteCourseSagaSaga } from "./delete-course-saga ";
+import { watchEditCourseSagaSaga } from "./edit-course-saga";
+import { watchGetCoursesSagaSaga } from "./get-courses-saga";
 
 
 export default function* rootSaga() {
@@ -66,6 +70,10 @@ export default function* rootSaga() {
         watchGetBlogPostsSaga(),
         watchCreateContactSagaSaga(),
         watchDeleteContactSagaSaga(),
-        watchGetContactsSagaSaga()
+        watchGetContactsSagaSaga(),
+        watchCreateCourseSagaSaga(),
+        watchDeleteCourseSagaSaga(),
+        watchEditCourseSagaSaga(),
+        watchGetCoursesSagaSaga()
     ]);
 }

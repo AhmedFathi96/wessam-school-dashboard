@@ -4,6 +4,7 @@ import HomePage from '../views/HomePage';
 import HighlightsPage from '../views/HighlightsPage';
 import BLogPage from '../views/BlogPage';
 import Contacts from '../views/contact';
+import Courses from '../views/courses';
 
 var ThemeRoutes = [
 	{
@@ -35,6 +36,11 @@ var ThemeRoutes = [
 		path: '/contacts',
 		name: 'contacts',
 		component: Contacts
+	},
+	{
+		path: '/courses',
+		name: 'courses',
+		component: Courses
 	},
 ];
 export default ThemeRoutes;

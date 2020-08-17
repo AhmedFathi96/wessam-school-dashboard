@@ -5,10 +5,8 @@ import { Navbar, NavbarBrand} from 'reactstrap';
 /*--------------------------------------------------------------------------------*/
 /* Import images which are need for the HEADER                                    */
 /*--------------------------------------------------------------------------------*/
-import logodarkicon from '../../../assets/images/logo-icon.png';
-import logolighticon from '../../../assets/images/logo-light-icon.png';
-import logodarktext from '../../../assets/images/logo-text.png';
-import logolighttext from '../../../assets/images/logo-light-text.png';
+import logo_250_50 from '../../../assets/250_50.png';
+
 
 export default () => {
 
@@ -38,18 +36,19 @@ export default () => {
                     {/* Logos Or Icon will be goes here for Light Layout && Dark Layout                */}
                     {/*--------------------------------------------------------------------------------*/}
                     <NavbarBrand href="/">
-                        <b className="logo-icon">
-                            <img src={logodarkicon} alt="homepage" className="dark-logo" />
+                        {/* <b className="logo-icon">
+                            <img src={logo_25_25} alt="homepage" className="dark-logo" />
                             <img
-                                src={logolighticon}
+                                src={logo_25_25}
                                 alt="homepage"
                                 className="light-logo"
                             />
-                        </b>
+                        </b> */}
                         <span className="logo-text">
-                            <img src={logodarktext} alt="homepage" className="dark-logo" />
+                            <img src={logo_250_50} style={{width: '250px'}} alt="homepage" className="dark-logo" />
                             <img
-                                src={logolighttext}
+                            style={{width: '250px' , marginLeft: '8rem'}}
+                                src={logo_250_50}
                                 className="light-logo"
                                 alt="homepage"
                             />

@@ -35,3 +35,11 @@ File: scss
 @import 'all/icons/flag-icon-css/flag-icon.min.css';
 @import 'all/icons/material-design-iconic-font/css/materialdesignicons.min.css';
 @import 'all/icons/crypto-icons/cryptocoins.css';
+
+
+#main-wrapper[data-layout='vertical'] .topbar .navbar-collapse[data-navbarbg='skin4'], #main-wrapper[data-layout='vertical'] .topbar[data-navbarbg='skin4'], #main-wrapper[data-layout='horizontal'] .topbar .navbar-collapse[data-navbarbg='skin4'], #main-wrapper[data-layout='horizontal'] .topbar[data-navbarbg='skin4'] {
+    background: #1a1a1a;
+}
+#main-wrapper[data-layout='vertical'] .topbar .top-navbar .navbar-header[data-logobg='skin4'], #main-wrapper[data-layout='horizontal'] .topbar .top-navbar .navbar-header[data-logobg='skin4'] {
+    background: #1a1a1a;
+}

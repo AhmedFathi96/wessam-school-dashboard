@@ -223,8 +223,7 @@
 		'ti-video-camera': '&#xe6cf;',
 		'ti-vector': '&#xe6d0;',
 		'ti-themify-logo': '&#xe6d1;',
-		'ti-themify-favicon': '&#xe6d2;',
-		'ti-themify-favicon-alt': '&#xe6d3;',
+
 		'ti-support': '&#xe6d4;',
 		'ti-stamp': '&#xe6d5;',
 		'ti-split-v-alt': '&#xe6d6;',

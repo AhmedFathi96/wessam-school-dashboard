@@ -1,8 +1,8 @@
 {
-    "name": "Wessam Dashboard",
+    "name": "wessam",
     "version": "1.0.0",
-    "homepage": "http://www.wessammohamed.com/admin-dashboard/",
-    "description": "MR Wessam's website dashboard",
+    "homepage": "https://www.wessammohamed.com/admin-dashboard",
+    "description": "This is admin dashboard for mr wessam website",
     "main": "index.js",
     "scripts": {
         "start": "react-scripts start",

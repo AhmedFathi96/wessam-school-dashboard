@@ -136,3 +136,19 @@ export const createContactAction = genericAction(createContact);
 
 const deleteContact = 'DELETE-CONTACT';
 export const deleteContactAction = genericAction(deleteContact);
+
+
+
+// Courses Actions
+
+const getCourses = 'GET-COURSES';
+export const getCoursesAction = genericAction(getCourses);
+
+const createCourse = 'CREATE-COURSES';
+export const createCourseAction = genericAction(createCourse);
+
+const editCourse = 'EDIT-COURSES';
+export const editCourseAction = genericAction(editCourse);
+
+const deleteCourse = 'DELETE-COURSES';
+export const deleteCourseAction = genericAction(deleteCourse);

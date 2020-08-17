@@ -29,6 +29,9 @@ const Sidebar = (props) => {
         const handelContactsSelect = () =>{
             setSelected('contacts');
         }
+        const handelCoursesSelect = () =>{
+            setSelected('courses');
+        }
         return (
             <aside className="left-sidebar" id="sidebarbg" data-sidebarbg={"skin6"}>
                 <div className="scroll-sidebar">
@@ -80,6 +83,14 @@ const Sidebar = (props) => {
                                 justifyContent: 'space-between',
                                 alignItems: 'center'}} activeClassName={`${style.default.act} active`}>
                                     <span className="hide-menu">Contacts</span>
+                                </NavLink>
+                            </li>
+
+                            <li onClick={handelCoursesSelect} className={'sidebar-item'}>
+                                <NavLink to='/courses' className="sidebar-link" style={{display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center'}} activeClassName={`${style.default.act} active`}>
+                                    <span className="hide-menu">Courses</span>
                                 </NavLink>
                             </li>
                             

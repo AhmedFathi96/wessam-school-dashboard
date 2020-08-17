@@ -51,6 +51,7 @@ export interface IGalleryImage{
     _id:string;
     gallery_img:File;
     height_ration:number;
+    width_ration:number;
     order:number;
 }
 
@@ -72,4 +73,17 @@ export interface IContactMessage{
     phone:string;
     message:string;
     createdAt:string;
+}
+
+export interface ICourse{
+    _id:string;
+    course_type:string;
+    price:Number;
+    desc:string;
+    plane_name:string;
+    bullet1?:string;
+    bullet2?:string;
+    bullet3?:string;
+    bullet4?:string;
+    bullet5?:string;
 }

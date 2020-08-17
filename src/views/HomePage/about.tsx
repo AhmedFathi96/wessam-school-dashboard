@@ -93,7 +93,7 @@ const HomeAbout:React.FC = () => {
                     <CardBody>
                     <div className={styles.default.sliderWrapper}>
                         {
-                            About.map(item=> <SingleAboutCard about_content={item.content} about_header={item.header} about_img={`http://161.35.115.193:5026/api/about/get-about-image/${item._id}/view`} id={item._id} order={item.order} />)
+                            About.map(item=> <SingleAboutCard about_content={item.content} about_header={item.header} about_img={`https://wessammohamed.com/api/about/get-about-image/${item._id}/view`} id={item._id} order={item.order} />)
                         }
                     </div>
                     

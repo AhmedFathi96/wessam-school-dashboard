@@ -26,8 +26,10 @@ const Gallery:React.FC = () => {
         event.preventDefault();
         const data = new FormData();
         data.append("height_ration",event.target.height_ration.value);
+        data.append("width_ration",event.target.width_ration.value);
         data.append("order",event.target.order.value);
         data.append("gallery_img",event.target.img_src.files[0]);
+        
         dispatch(createGalleryImage(data));
         setModal(!modal);
     }
@@ -66,6 +68,10 @@ const Gallery:React.FC = () => {
                                 <Input type="number" name="height_ration" placeholder="Ex: 4" id="height_ration" required />
                             </FormGroup>
                             <FormGroup>
+                                <Label for="width_ration">Image width ratio</Label>
+                                <Input type="number" name="width_ration" placeholder="Ex: 4" id="width_ration" required />
+                            </FormGroup>
+                            <FormGroup>
                                 <Label for="order">Image Order</Label>
                                 <Input type="number" name="order" placeholder="Ex: 1" id="order" required />
                             </FormGroup>
@@ -89,7 +95,7 @@ const Gallery:React.FC = () => {
                 <div className={styles.default.sliderWrapper}>
                     {
                         GalleryImages.map( item=> 
-                            <SingleGalleryImageCard id={item._id} img_src={`http://161.35.115.193:5026/api/gallery/get-gallery-image/${item._id}/view`} height_ration={item.height_ration} order={item.order} />
+                            <SingleGalleryImageCard  width_ration={item.width_ration} id={item._id} img_src={`https://wessammohamed.com/api/gallery/get-gallery-image/${item._id}/view`} height_ration={item.height_ration} order={item.order} />
                         )
                     }
                 </div>

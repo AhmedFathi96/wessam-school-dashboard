@@ -13,11 +13,12 @@ import { editGalleryImage, deleteGalleryImage } from "../../../React-Redux/Actio
 interface IProps{
     img_src:string;
     height_ration: number;
+    width_ration: number;
     order: number;
     id:string;
 }
 const SingleGalleryImageCard:React.FC<IProps> = (props) => {
-    const {img_src,height_ration,order,id} = props;
+    const {img_src,height_ration,order,id,width_ration} = props;
     const [modal, setModal] = useState(false);
     const [obj, setObj] = useState<any>({});
 
@@ -31,6 +32,7 @@ const SingleGalleryImageCard:React.FC<IProps> = (props) => {
         event.preventDefault();
         const data = new FormData();
         data.append("height_ration",event.target.height_ration.value);
+        data.append("width_ration",event.target.width_ration.value);
         data.append("order",event.target.order.value);
         data.append("gallery_img",event.target.img_src.files[0]);
         dispatch(editGalleryImage({data:data , id: id}));
@@ -47,6 +49,10 @@ const SingleGalleryImageCard:React.FC<IProps> = (props) => {
                         <FormGroup>
                             <Label for="height_ratio">Image height ratio</Label>
                             <Input type="number" name="height_ration" placeholder="Ex: 4" id="height_ration" defaultValue={obj.height_ration} required />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="width_ration">Image width ratio</Label>
+                            <Input type="number" name="width_ration" placeholder="Ex: 4" id="width_ration" defaultValue={obj.width_ration} required />
                         </FormGroup>
                         <FormGroup>
                             <Label for="order">Image Order</Label>
@@ -73,7 +79,7 @@ const SingleGalleryImageCard:React.FC<IProps> = (props) => {
                 
                 <CardBody className="text-center">
                     <CardHeader style={{textAlign: 'left'}}>
-                        Height Ratio: {height_ration}
+                        Height Ratio: {height_ration} | Width Ration: {width_ration}
                     </CardHeader>
                     <CardSubtitle className="mb-0" style={{display: 'flex' , justifyContent: 'space-between', alignItems: 'center'}}>
                         <span style={{textAlign: 'left', marginTop:'1rem' , fontSize:'18px'}}>
