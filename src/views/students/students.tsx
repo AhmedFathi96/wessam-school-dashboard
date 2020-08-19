@@ -3,18 +3,42 @@ import StudentsTable from "./studentsTable/index";
 import { useSelect } from "../../helper";
 import { useDispatch } from "react-redux";
 import { getStudents } from "../../React-Redux/Actions/student-action";
+import Loader from "react-loader-spinner";
+import ReactNotification from 'react-notifications-component';
 
 const Students:React.FC = () => {
 
     const dispatch = useDispatch();
 
-    const {students} = useSelect(state => state.studentsReducer);
+    const {students , student_is_loading} = useSelect(state => state.studentsReducer);
     React.useEffect( ()=>{
         dispatch(getStudents())
     },[])
 
     return (
-        <StudentsTable students ={students} />
+        <>
+            <div style={{marginBottom: '3rem',marginRight: '5rem'}}>
+                <ReactNotification />
+            </div>
+            {
+                (student_is_loading)?
+                    <>
+                        <StudentsTable students ={students} />
+                    </>
+                    :
+                    <div style={{margin: '25% 40%'}}>
+                        <Loader
+                            type="Puff"
+                            color="#B09E80"
+                            height={150}
+                            width={150}
+                        />
+                    </div>
+                    
+            }
+        
+        </>
+        
     );
 }
 

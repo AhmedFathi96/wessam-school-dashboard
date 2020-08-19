@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as styles from './styles.module.css';
 import { CardBody, Card, CardTitle, Button, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from "reactstrap";
 import SingleTestimonialCard from "./TestimoialCard";
-import { useSelect } from "../../helper";
 import { useDispatch } from "react-redux";
-import { getTestimonials, createTestimonial } from "../../React-Redux/Actions/testimonial-action";
+import { createTestimonial } from "../../React-Redux/Actions/testimonial-action";
+import { ITestimonialSection } from "../../lib";
 
-const HomeTestimonial:React.FC = () => {
+
+interface IProps{
+    Testimonial: ITestimonialSection[];
+}
+
+const HomeTestimonial:React.FC<IProps> = (props) => {
+    const {Testimonial} =props;
     const [modal, setModal] = useState(false);
     const [obj, setObj] = useState<any>({});
 
@@ -15,11 +21,7 @@ const HomeTestimonial:React.FC = () => {
         setModal(!modal);
     }
 
-    const {Testimonial} = useSelect(state=> state.testimonialReducer)
     const dispatch = useDispatch();
-    useEffect(()=> {
-        dispatch(getTestimonials());
-    },[])
 
     const handleSubmit = (event: any) => {
         event.preventDefault();

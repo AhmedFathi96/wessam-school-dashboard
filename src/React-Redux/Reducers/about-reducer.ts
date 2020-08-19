@@ -4,39 +4,40 @@ import { IAboutSection } from "../../lib/index";
 
 interface IState{
     About: IAboutSection[];
+    about_is_loading:boolean
     
 }
 
 export const aboutReducer = reducer<IState>(
     {
         About: [],
+        about_is_loading:false
     },
     on(getAboutSucceeded, (state, { payload }) => ({
         ...state,
         About: payload,
+        about_is_loading: true
     })),
     on(createAboutSucceeded, (state, { payload }) => ({
         ...state,
-        About: [...state.About , payload]
+        About: [...state.About , payload],
+        about_is_loading: true
     })),
     on(editAboutSucceeded, (state, { payload }) => {
         const oldData = state.About.filter((SliderItem) => SliderItem._id !== payload._id);
         const newAbout = payload;
         return{
             ...state,
-            About: [...oldData, newAbout]
+            About: [...oldData, newAbout],
+            about_is_loading: true
         }
     }),
     on(deleteAboutSucceeded, (state, { payload }) => {
         const oldData = state.About.filter((SliderItem) => SliderItem._id !== payload._id);
         return{
             ...state,
-            About: [...oldData]
+            About: [...oldData],
+            about_is_loading: true
         }
     }),
-    // on(editAboutucceeded, (state, { payload }) => ({
-    //     ...state,
-    //     About: [...state.About , payload]
-    // })),
-    
 )

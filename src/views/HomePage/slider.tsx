@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from "react";
-import img1 from '../../assets/images/big/img1.jpg';
+import React, { useState } from "react";
 import * as styles from './styles.module.css';
 import SingleImageCard from "./SliderCard";
 import { CardBody, Card, CardTitle, Button, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { createSliderItem, getSliderItems } from "../../React-Redux/Actions/slider-action";
-import { useSelect } from "../../helper";
+import { createSliderItem } from "../../React-Redux/Actions/slider-action";
+import { ISliderItem } from "../../lib";
 
-const HomeSlider:React.FC = () => {
 
-    const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+interface IProps{
+    SliderItems: ISliderItem[];
+}
+
+const HomeSlider:React.FC<IProps> = (props) => {
+
+    const {SliderItems} = props;
     const [modal, setModal] = useState(false);
     const [obj, setObj] = useState<any>({});
 
@@ -18,7 +22,6 @@ const HomeSlider:React.FC = () => {
         setModal(!modal);
     }
 
-    const {SliderItems} = useSelect(state => state.sliderItemsReducer);
     const dispatch = useDispatch();
     const handleSubmit = (event: any) => {
         event.preventDefault();
@@ -29,9 +32,6 @@ const HomeSlider:React.FC = () => {
         dispatch(createSliderItem(data));
         setModal(!modal);
     }
-    useEffect(()=>{
-        dispatch(getSliderItems());
-    },[])
     return (
         <div>
                 <Card>

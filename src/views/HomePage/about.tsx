@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as styles from './styles.module.css';
-import { CardBody, Card, CardTitle, Button, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label, CardImg, CardHeader, CardSubtitle } from "reactstrap";
+import { CardBody, Card, CardTitle, Button, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label} from "reactstrap";
 import SingleAboutCard from "./AboutCard";
-import { useSelect } from "../../helper";
 import { useDispatch } from "react-redux";
-import { getAbout, createAbout } from "../../React-Redux/Actions/about-action";
+import { createAbout } from "../../React-Redux/Actions/about-action";
+import { IAboutSection } from "../../lib";
 
-const HomeAbout:React.FC = () => {
+interface IProps{
+    About: IAboutSection[];
+}
 
+const HomeAbout:React.FC<IProps> = (props) => {
+    const {About} = props;
     const [modal, setModal] = useState(false);
     const [obj, setObj] = useState<any>({});
 
@@ -16,12 +20,8 @@ const HomeAbout:React.FC = () => {
         setModal(!modal);
     }
 
-    const {About} = useSelect(state=> state.aboutReducer)
-    const dispatch = useDispatch();
-    useEffect(()=> {
-        dispatch(getAbout());
-    },[])
 
+    const dispatch = useDispatch();
     const handleSubmit = (event: any) => {
         event.preventDefault();
         const data = new FormData();

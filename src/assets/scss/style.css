@@ -11684,3 +11684,8 @@ button.rbc-input::-moz-focus-inner {
 
 
 
+.notification-container-top-right {
+  left: -1rem !important;
+  top: -1rem !important;
+
+}

@@ -4,7 +4,7 @@ import {
     Card,
     CardBody,
     CardTitle,
-    Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input
+    Button, Modal, ModalHeader, ModalBody
 } from 'reactstrap';
 import "../../../../node_modules/react-table/react-table.css";
 import { IContactMessage } from '../../../lib';

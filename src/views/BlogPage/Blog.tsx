@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as styles from './styles.module.css';
 import SingleBlogPostCard from "./BlogPostCard";
 import { CardBody, Card, CardTitle, Button, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { useSelect } from "../../helper";
-import { getBlogPost, createBlogPost } from "../../React-Redux/Actions/blog-action";
+import {  createBlogPost } from "../../React-Redux/Actions/blog-action";
+import { IBlogPost } from "../../lib";
 
-const Blog:React.FC = () => {
+interface IProps{
+    BlogPost: IBlogPost[];
+}
 
+const Blog:React.FC<IProps> = (props) => {
+    const {BlogPost} = props
     const [modal, setModal] = useState(false);
     const [obj, setObj] = useState<any>({});
 
@@ -16,11 +20,8 @@ const Blog:React.FC = () => {
         setModal(!modal);
     }
 
-    const {BlogPost} = useSelect(state => state.blogReducer);
     const dispatch = useDispatch();
-    useEffect(()=>{
-        dispatch(getBlogPost());
-    },[])
+
     
     const handleSubmit = (event: any) => {
         event.preventDefault();

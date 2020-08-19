@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import * as styles from './styles.module.css';
 import SingleGalleryImageCard from "./GalleryImageCard";
 import { CardBody, Card, CardTitle, Button, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Label } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { useSelect } from "../../helper";
-import { createGalleryImage, getGalleryImage } from "../../React-Redux/Actions/gallery-action";
+import { createGalleryImage,  } from "../../React-Redux/Actions/gallery-action";
+import { IGalleryImage } from "../../lib";
 
-const Gallery:React.FC = () => {
+interface IProps{
+    GalleryImages: IGalleryImage[];
+}
+const Gallery:React.FC<IProps> = (props) => {
 
+    const {GalleryImages} = props;
     const [modal, setModal] = useState(false);
     const [obj, setObj] = useState<any>({});
 
@@ -16,11 +20,8 @@ const Gallery:React.FC = () => {
         setModal(!modal);
     }
 
-    const {GalleryImages} = useSelect(state => state.galleryImagesReducer);
     const dispatch = useDispatch();
-    useEffect(()=>{
-        dispatch(getGalleryImage());
-    },[])
+
     
     const handleSubmit = (event: any) => {
         event.preventDefault();

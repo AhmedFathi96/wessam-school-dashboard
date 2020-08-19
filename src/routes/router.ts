@@ -5,6 +5,8 @@ import HighlightsPage from '../views/HighlightsPage';
 import BLogPage from '../views/BlogPage';
 import Contacts from '../views/contact';
 import Courses from '../views/courses';
+import Headers from '../views/Header/headerPage';
+import InfoWrapper from '../views/Info/InfoWrapper';
 
 var ThemeRoutes = [
 	{
@@ -41,6 +43,16 @@ var ThemeRoutes = [
 		path: '/courses',
 		name: 'courses',
 		component: Courses
+	},
+	{
+		path: '/header',
+		name: 'header',
+		component: Headers
+	},
+	{
+		path: '/info',
+		name: 'info',
+		component: InfoWrapper
 	},
 ];
 export default ThemeRoutes;

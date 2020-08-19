@@ -87,3 +87,36 @@ export interface ICourse{
     bullet4?:string;
     bullet5?:string;
 }
+
+export interface IGenericHeader{
+    header_image:string;
+    header:string;
+    text:string;
+}
+
+export interface IPageHeaders{
+    _id:string;
+    highlights_header:string;
+    highlights_text:string;
+    courses_header:string;
+    courses_text:string;
+    blog_header:string;
+    blog_text:string;
+    contact_header:string;
+    contact_text:string;
+    testimonial_header:string;
+    testimonial_text:string;
+}
+
+export interface IInfo{
+    _id:string;
+    address:string;
+    email:string;
+    phone:string;
+    map_url:string;
+    facebook_url:string;
+    twitter_url:string;
+    instagram_url:string;
+    whatsapp_number:string;
+    company_name: string;
+}

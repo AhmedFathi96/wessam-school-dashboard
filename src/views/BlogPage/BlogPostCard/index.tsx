@@ -171,6 +171,7 @@ const SingleBlogPostCard:React.FC<IProps> = (props) => {
                         </div>
                     </CardSubtitle>
                 </CardBody>
+            
             </Card>
                     
         </div>

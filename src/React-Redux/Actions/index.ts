@@ -152,3 +152,35 @@ export const editCourseAction = genericAction(editCourse);
 
 const deleteCourse = 'DELETE-COURSES';
 export const deleteCourseAction = genericAction(deleteCourse);
+
+// Page headers Action
+
+// Courses Actions
+
+const getPagesHeaders = 'GET-PAGES-HEADERS';
+export const getPagesHeadersAction = genericAction(getPagesHeaders);
+
+
+const editHighlightsPageHeader = 'EDIT-HIGHLIGHT-HEADER';
+export const editHighlightsPageHeaderAction = genericAction(editHighlightsPageHeader);
+
+const editBlogPageHeader = 'EDIT-BLOG-HEADER';
+export const editBlogPageHeaderAction = genericAction(editBlogPageHeader);
+
+const editCoursesPageHeader = 'EDIT-COURSES-HEADER';
+export const editCoursesPageHeaderAction = genericAction(editCoursesPageHeader);
+
+const editContactsPageHeader = 'EDIT-CONTACTS-HEADER';
+export const editContactsPageHeaderAction = genericAction(editContactsPageHeader);
+
+const editTestimonialPageHeader = 'EDIT-TESTIMONIALS-HEADER';
+export const editTestimonialPageHeaderAction = genericAction(editTestimonialPageHeader);
+
+
+
+
+const getInfo = 'GET-INFO';
+export const getInfoAction = genericAction(getInfo);
+
+const editInfo = 'EDIT-INFO';
+export const editInfoAction = genericAction(editInfo);

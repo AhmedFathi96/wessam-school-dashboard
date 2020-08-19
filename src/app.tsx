@@ -3,7 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { useSelect } from './helper';
 import Fulllayout from './layouts/fulllayout'
 import Login from './views/authentication/login';
-
+import 'react-notifications-component/dist/theme.css';
 function App() {
     const { is_logging , token} = useSelect(state => state.authReducer);
 
@@ -12,9 +12,11 @@ function App() {
     return (
         <div className="App">
             {is_logging ? (
+                <>
                 <HashRouter>
                     <Fulllayout />
                 </HashRouter>
+                </>
                 ) : (
                     <Login />
             )}

@@ -3,8 +3,7 @@ import { getAboutAction } from "../Actions";
 import { getAbout } from "../../Axios/get-about";
 import { selectToken } from "../../helper";
 import { getAboutSucceeded , getAboutFailed } from "../Actions/about-action";
-// import { saveToLocalStorage } from "../Reducers";
-
+import { store } from 'react-notifications-component';
 function* getAboutSaga() {
 
     try {

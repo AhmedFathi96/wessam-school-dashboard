@@ -1,5 +1,5 @@
 const production = 'https://wessammohamed.com/';
-const local = 'http://localhost:5026/';
+const local = 'http://productionhost:5026/';
 
 
 export const loginUTR     = `${production}api/login`;
@@ -61,3 +61,25 @@ export const getCoursesURL = `${production}api/courses/get-courses`;
 export const createCourseURL = `${production}api/courses/create-course`;
 export const editCourseURL = (id:string) => `${production}api/courses/update-course/${id}`;
 export const deleteCourseURL = (id:string) => `${production}api/courses/delete-course/${id}`;
+
+
+
+
+
+
+export const getPagesURL = `${production}api/pages/get-all-pages`;
+export const editHighlightsURL = (id:string) => `${production}api/pages/update-highlights-page/${id}`;
+export const editCoursesURL = (id:string) => `${production}api/pages/update-courses-page/${id}`;
+export const editBlogURL = (id:string) => `${production}api/pages/update-blog-page/${id}`;
+export const editContactURL = (id:string) => `${production}api/pages/update-contact-page/${id}`;
+export const editTestimonialsURL = (id:string) => `${production}api/pages/update-testimonial-page/${id}`;
+
+
+export const editInfoURL = (id:string) =>  `${production}api/info/update-info/${id}`;
+export const getInfoURL =  `${production}api/info/get-info`;
+
+
+
+// export const createCourseURL = `${production}api/courses/create-course`;
+// export const editCourseURL = (id:string) => `${production}api/courses/update-course/${id}`;
+// export const deleteCourseURL = (id:string) => `${production}api/courses/delete-course/${id}`;

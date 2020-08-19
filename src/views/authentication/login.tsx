@@ -10,7 +10,6 @@ import {
     Col,
     Button
 } from 'reactstrap';
-import img1 from '../../assets/images/logo-icon.png';
 import img2 from '../../assets/images/background/login-register.jpg';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -49,16 +48,15 @@ const Login = () => {
             <div className="auth-box on-sidebar">
                 <div id="loginform">
                     <div className="logo">
-                        <span className="db"><img src={img1} alt="logo" /></span>
+                        <span className="db"><img src={require('../../assets/250_50.png')} style={{width: "250px"}} alt="logo" /></span>
                         <h5 className="font-medium mb-3">Sign In to Admin</h5>
-                        <div className="alert alert-success">email: test & Password: 12345password</div>
                     </div>
                     <Row>
                         <Col xs="12">
                             <Formik
                                 initialValues={{
-                                    email: 'info1@admin.com',
-                                    password: '12345password'
+                                    email: '',
+                                    password: ''
                                 }}
                                 validationSchema={Yup.object().shape({
                                     email: Yup.string().required('email is required'),
@@ -110,7 +108,7 @@ const Login = () => {
                 </div>
                 <div id="recoverform">
                     <div className="logo">
-                        <span className="db"><img src={img1} alt="logo" /></span>
+                        <span className="db"><img src={require('../../assets/250_50.png')} style={{width: "250px"}} alt="logo" /></span>
                         <h5 className="font-medium mb-3">Recover Password</h5>
                         <span>Enter your Email and instructions will be sent to you!</span>
                     </div>

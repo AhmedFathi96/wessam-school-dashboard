@@ -35,6 +35,14 @@ import { watchCreateCourseSagaSaga } from "./create-course-saga";
 import { watchDeleteCourseSagaSaga } from "./delete-course-saga ";
 import { watchEditCourseSagaSaga } from "./edit-course-saga";
 import { watchGetCoursesSagaSaga } from "./get-courses-saga";
+import { watchGetPagesHeadersSaga } from "./get-pages-header-saga";
+import { watchEditHighlightsSaga } from "./edit-highlights-saga";
+import { watchEditCoursesSaga } from "./edit-courses-saga";
+import { watchEditBlogSaga } from "./edit-blog-saga";
+import { watchEditContactsSaga } from "./edit-contacts-saga";
+import { watchEditTestimonialsSaga } from "./edit-testimonials-saga";
+import { watchEditInfoSagaSaga } from "./edit-info-saga";
+import { watchGetInfoSagaSaga } from "./get-info-saga";
 
 
 export default function* rootSaga() {
@@ -74,6 +82,15 @@ export default function* rootSaga() {
         watchCreateCourseSagaSaga(),
         watchDeleteCourseSagaSaga(),
         watchEditCourseSagaSaga(),
-        watchGetCoursesSagaSaga()
+        watchGetCoursesSagaSaga(),
+        watchGetPagesHeadersSaga(),
+        watchEditHighlightsSaga(),
+        watchEditCoursesSaga(),
+        watchEditBlogSaga(),
+        watchEditContactsSaga(),
+        watchEditTestimonialsSaga(),
+        watchGetAdminsSagaSaga(),
+        watchGetInfoSagaSaga(),
+        watchEditInfoSagaSaga()
     ]);
 }

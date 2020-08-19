@@ -3,8 +3,7 @@ import { getStudentsAction } from "../Actions";
 import { getStudents } from "../../Axios/get-students";
 import { selectToken } from "../../helper";
 import { getStudentsSucceeded , getStudentsFailed } from "../Actions/student-action";
-// import { saveToLocalStorage } from "../Reducers";
-
+import { store } from 'react-notifications-component';
 function* getStudentsSaga() {
 
     try {
@@ -14,6 +13,19 @@ function* getStudentsSaga() {
         yield put(getStudentsSucceeded(res.data.data));
     } catch (e) {
         yield put(getStudentsFailed(e));
+        store.addNotification({
+            title: "Error Message!",
+            message: "Something went wrong",
+            type: "danger",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animated", "fadeIn"],
+            animationOut: ["animated", "fadeOut"],
+            dismiss: {
+                duration: 5000,
+                onScreen: true
+            }
+        });
     } 
 }
 

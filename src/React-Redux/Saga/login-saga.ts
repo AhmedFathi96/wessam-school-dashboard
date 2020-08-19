@@ -3,8 +3,7 @@ import { call, put, takeLatest  } from "redux-saga/effects";
 import { loginSucceeded, loginFailed, login } from "../Actions/login-action";
 import { loginAction } from "../Actions";
 import { loginAPI } from "../../Axios/login";
-// import { saveToLocalStorage } from "../Reducers";
-
+import { store } from 'react-notifications-component';
 const actionType = union(login);
 
 function* loginSaga(action: typeof actionType.actions) {

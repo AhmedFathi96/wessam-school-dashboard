@@ -11,7 +11,9 @@ import {testimonialReducer} from './testimonial-reducer';
 import {galleryImagesReducer} from './gallery-reducer';
 import {blogReducer} from './blog-reducer';
 import {contactsReducer} from './contacts-reducer';
-import {coursesReducer} from './courses-reducer'
+import {coursesReducer} from './courses-reducer';
+import {pagesHeadersReducer} from './pages-reducer';
+import {infoReducer} from './info-reducer';
 
 const persistAuth: PersistConfig = {
     key: "authReducer",
@@ -29,7 +31,9 @@ export const rootReducer = combineReducers({
     galleryImagesReducer,
     blogReducer,
     contactsReducer,
-    coursesReducer
+    coursesReducer,
+    pagesHeadersReducer,
+    infoReducer
 });
 
 type rootReducer = typeof rootReducer;

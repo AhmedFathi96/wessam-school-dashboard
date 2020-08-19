@@ -8,6 +8,7 @@ import persistedStore from "./React-Redux/store";
 export async function initApp() {
 const { store } = await persistedStore();
 
+
 	ReactDOM.render(
 		<Provider store={store}>
 		<>

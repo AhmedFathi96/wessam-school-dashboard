@@ -43,3 +43,22 @@ File: scss
 #main-wrapper[data-layout='vertical'] .topbar .top-navbar .navbar-header[data-logobg='skin4'], #main-wrapper[data-layout='horizontal'] .topbar .top-navbar .navbar-header[data-logobg='skin4'] {
     background: #1a1a1a;
 }
+
+.notification-container-top-right {
+    left: -1rem !important;
+    top: -1rem !important;
+
+}
+.modal-title{
+    color: #777;
+}
+.btn-primary{
+    color: #fff;
+    background-color: #B09E80;
+    border-color: #B09E80;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #B09E80;
+    border-color: #B09E80;
+}   
