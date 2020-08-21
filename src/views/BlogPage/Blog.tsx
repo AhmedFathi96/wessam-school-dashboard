@@ -66,15 +66,15 @@ const Blog:React.FC<IProps> = (props) => {
                             <Input type="hidden" name="id" id="id" />
                             <FormGroup>
                                 <Label for="header">Post header</Label>
-                                <Input type="text" name="header" placeholder="Ex: some shit" id="header" required />
+                                <Input type="text" name="header" placeholder="Ex: The required text" id="header" required />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="post_content">Post snippet content</Label>
-                                <Input type="textarea" rows="4" name="post_content" placeholder="Ex: hello bitches" id="post_content" required />
+                                <Input type="textarea" rows="4" name="post_content" placeholder="Ex: The required text" id="post_content" required />
                             </FormGroup>
                             <FormGroup>
                                 <Label for="content_body">Post detail content</Label>
-                                <Input type="textarea" rows="10" name="content_body" placeholder="Ex: hello bitches" id="content_body" required />
+                                <Input type="textarea" rows="10" name="content_body" placeholder="Ex: The required text" id="content_body" required />
                             </FormGroup>
 
                             <FormGroup className="mb-1">

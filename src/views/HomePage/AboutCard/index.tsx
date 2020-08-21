@@ -49,7 +49,7 @@ const SingleAboutCard:React.FC<IProps> = (props) => {
                         <Input type="hidden" name="id" id="id" defaultValue={obj.id} />
                         <FormGroup>
                             <Label for="about_header">about header</Label>
-                            <Input type="text" name="about_header" placeholder="Ex: hello bitches" id="about_header" defaultValue={obj.about_header} required />
+                            <Input type="text" name="about_header" placeholder="Ex: The required text" id="about_header" defaultValue={obj.about_header} required />
                         </FormGroup>
                         <FormGroup>
                             <Label for="about_content">about content</Label>

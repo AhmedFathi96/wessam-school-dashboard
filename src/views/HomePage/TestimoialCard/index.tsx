@@ -50,15 +50,15 @@ const SingleTestimonialCard:React.FC<IProps> = (props) => {
                         <Input type="hidden" name="id" id="id" defaultValue={obj.id} />
                         <FormGroup>
                             <Label for="testimonial_content">Testimonial Content</Label>
-                            <Input type="textarea" rows="5" name="testimonial_content" placeholder="Ex: hello bitches" id="testimonial_content" defaultValue={obj.testimonial_content} required />
+                            <Input type="textarea" rows="5" name="testimonial_content" placeholder="Ex: The required text" id="testimonial_content" defaultValue={obj.testimonial_content} required />
                         </FormGroup>
                         <FormGroup>
                             <Label for="author">Testimonial author</Label>
-                            <Input type="text" name="testimonial_author" placeholder="Ex: some shit" id="testimonial_author" defaultValue={obj.testimonial_author} required />
+                            <Input type="text" name="testimonial_author" placeholder="Ex: The required text" id="testimonial_author" defaultValue={obj.testimonial_author} required />
                         </FormGroup>
                         <FormGroup>
                             <Label for="author_job">Testimonial author work</Label>
-                            <Input type="text" name="testimonial_author_job" placeholder="Ex: some shit" id="testimonial_author_job" defaultValue={obj.testimonial_author_job} required />
+                            <Input type="text" name="testimonial_author_job" placeholder="Ex: The required text" id="testimonial_author_job" defaultValue={obj.testimonial_author_job} required />
                         </FormGroup>
                         <FormGroup>
                             <Label for="order">Testimonial Order</Label>

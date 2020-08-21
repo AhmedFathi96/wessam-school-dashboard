@@ -47,7 +47,7 @@ const SingleImageCard:React.FC<IProps> = (props) => {
                         <Input type="hidden" name="id" id="id" defaultValue={obj.id} />
                         <FormGroup>
                             <Label for="slider_caption">Slider Caption</Label>
-                            <Input type="textarea" rows="5" name="slider_caption" placeholder="Ex: hello bitches" id="caption" defaultValue={obj.slider_caption} required />
+                            <Input type="textarea" rows="5" name="slider_caption" placeholder="Ex: The required text" id="caption" defaultValue={obj.slider_caption} required />
                         </FormGroup>
                         <FormGroup>
                             <Label for="order">Slider Order</Label>
