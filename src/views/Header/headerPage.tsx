@@ -27,7 +27,7 @@ const Headers:React.FC = (props) => {
                 <div>
                 <PageHeader 
                     header={PagesHeaders.highlights_header}
-                    header_image={`https:/wessammohamed.com/api/pages/view-highlights-page-cover-image`} 
+                    header_image={`api/pages/view-highlights-page-cover-image`} 
                     page_name="highlights"
                     text={PagesHeaders.highlights_text}  
                     id={PagesHeaders._id}
@@ -35,7 +35,7 @@ const Headers:React.FC = (props) => {
                 <br />
                 <PageHeader 
                     header={PagesHeaders.courses_header} 
-                    header_image={`https:/wessammohamed.com/api/pages/view-courses-page-cover-image`}
+                    header_image={`api/pages/view-courses-page-cover-image`}
                     page_name="courses" 
                     text={PagesHeaders.courses_text}  
                     id={PagesHeaders._id}
@@ -43,14 +43,14 @@ const Headers:React.FC = (props) => {
                 <br />
                 <PageHeader 
                     header={PagesHeaders.blog_header} 
-                    header_image={`https:/wessammohamed.com/api/pages/view-blog-page-cover-image`}
+                    header_image={`api/pages/view-blog-page-cover-image`}
                     page_name="blog" 
                     text={PagesHeaders.contact_text}
                     id={PagesHeaders._id}
                 />
                 <PageHeader 
                     header={PagesHeaders.contact_header} 
-                    header_image={`https:/wessammohamed.com/api/pages/view-contact-page-cover-image`}
+                    header_image={`api/pages/view-contact-page-cover-image`}
                     page_name="contact" 
                     text={PagesHeaders.contact_text}  
                     id={PagesHeaders._id}
@@ -58,7 +58,7 @@ const Headers:React.FC = (props) => {
                 <br />
                 <PageHeader 
                     header={PagesHeaders.testimonial_header} 
-                    header_image={`https:/wessammohamed.com/api/pages/view-testimonial-page-cover-image`}
+                    header_image={`api/pages/view-testimonial-page-cover-image`}
                     page_name="testimonial" 
                     text={PagesHeaders.testimonial_text} 
                     id={PagesHeaders._id} 

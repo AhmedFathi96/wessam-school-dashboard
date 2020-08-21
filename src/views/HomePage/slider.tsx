@@ -88,7 +88,7 @@ const HomeSlider:React.FC<IProps> = (props) => {
                 <div className={styles.default.sliderWrapper}>
                     {
                         SliderItems.map( item=> 
-                            <SingleImageCard id={item._id} img_src={`https://wessammohamed.com/api/slider/get-slider-image/${item._id}/view`} slider_caption={item.caption} order={item.order} />
+                            <SingleImageCard id={item._id} img_src={`api/slider/get-slider-image/${item._id}/view`} slider_caption={item.caption} order={item.order} />
                         )
                     }
                 </div>

@@ -101,7 +101,7 @@ const HomeTestimonial:React.FC<IProps> = (props) => {
                         Testimonial.map(item=>
                             <SingleTestimonialCard 
                                 id={item._id}
-                                img_src={`https://wessammohamed.com/api/testimonial/get-testimonial-image/${item._id}/view`} 
+                                img_src={`api/testimonial/get-testimonial-image/${item._id}/view`} 
                                 testimonial_content={item.content} 
                                 testimonial_author={item.author} 
                                 testimonial_author_job={item.about_author} 

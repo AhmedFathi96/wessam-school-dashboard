@@ -107,8 +107,8 @@ const Blog:React.FC<IProps> = (props) => {
                         BlogPost.map( item=> 
                             <SingleBlogPostCard 
                                 id={item._id} 
-                                blog_cover_img={`https://wessammohamed.com/api/blog/get-blog-post-cover-image/${item._id}/view`} 
-                                blog_post_img={`https://wessammohamed.com/api/blog/get-blog-post-image/${item._id}/view`} 
+                                blog_cover_img={`api/blog/get-blog-post-cover-image/${item._id}/view`} 
+                                blog_post_img={`api/blog/get-blog-post-image/${item._id}/view`} 
                                 content_body={item.content_body}
                                 header={item.header}
                                 created_at={item.createdAt}

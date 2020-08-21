@@ -96,7 +96,7 @@ const Gallery:React.FC<IProps> = (props) => {
                 <div className={styles.default.sliderWrapper}>
                     {
                         GalleryImages.map( item=> 
-                            <SingleGalleryImageCard  width_ration={item.width_ration} id={item._id} img_src={`https://wessammohamed.com/api/gallery/get-gallery-image/${item._id}/view`} height_ration={item.height_ration} order={item.order} />
+                            <SingleGalleryImageCard  width_ration={item.width_ration} id={item._id} img_src={`api/gallery/get-gallery-image/${item._id}/view`} height_ration={item.height_ration} order={item.order} />
                         )
                     }
                 </div>
